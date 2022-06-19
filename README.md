@@ -24,6 +24,19 @@
 
   ```npm i -g```
 
+### Setup
+- To configure credentials
+  
+  ```oii config --username <your_username> --password <your_password>```
+
+  or
+
+  ```mv config.sample.json config.json``` and then fill credentials directly into `config.json`
+
+- To log in
+  
+  ```oii login```
+
 ### Usage
 - ```oii --help```
   

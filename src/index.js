@@ -29,7 +29,7 @@ program.command("login")
 
 program.command("send-submission")
 .description("sends submission given task and path")
-.argument("<task>", "task to submit")
+.option("-t --task <task>", "task to submit")
 .argument("<path>", "location of the code to submit")
 .action(sendSubmission)
 

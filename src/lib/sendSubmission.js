@@ -7,7 +7,7 @@ import * as url from "url"
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 axios.defaults.headers = { Cookie: readFileSync(join(__dirname, "../../tmp/auth-cookie")) }
 
-export const sendSubmission = async (task, path) => {
+export const sendSubmission = async (path, { task }) => {
   try {
     const { submission_format } = await getTask(task)
     const { data } = await axios.post("https://training.olinfo.it/api/submission", {

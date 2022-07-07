@@ -20,6 +20,10 @@
 
   ```cd oii-cli```
 
+- Install dependencies
+
+  ```npm i```
+
 - Install package (additional permissions with `sudo` may be needed)
 
   ```npm i -g```

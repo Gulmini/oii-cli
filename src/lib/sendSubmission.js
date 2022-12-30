@@ -14,13 +14,15 @@ export const sendSubmission = async (path, { task }) => {
       action: "new",
       files: {
         [ submission_format[0] ]: {
-          data: readFileSync(join(process.cwd(), path), "base64"),
+          data: readFileSync(path, "base64"),
           filename: basename(path)
         }
       },
-      task_name: task
+      task_name: task,
+      language: "Python 3 / CPython"
     })
     if (data.error) throw new Error(data.error)
+    return data.id
   } catch (err) {
     throw err
   }  
